@@ -20,7 +20,7 @@ A novel efficient methodology relying on the functional statistics of the point 
 > For sake of comparison, we provide also an implementation of the counterpart strategy relying on the zeros of the Short-Time Fourier transform developed in the paper ``*On the zeros of the spectrogram of white noise*" by Bardenet R., Flamant, J. & Chainais, P. (2021) Applied and Computational Harmonic Analysis.
 >
 > The interested reader can then reproduce `Figures 7, 8 and 9` of the paper ``*A covariant, discrete time-frequency representation tailored for zero-based signal detection*".  
-> A demonstration is given in the notebook [`detection-test-Kravchuk-zeros'](/demos/detection-test-Kravchuk-zeros.ipynb).
+> A demonstration is given in the notebook [`detection-test-Kravchuk-zeros`](/demos/detection-test-Kravchuk-zeros.ipynb).
 
 ## Dependencies
 
