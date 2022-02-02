@@ -29,6 +29,7 @@ The following Python libraries are necessary:
 - `numpy`
 - `scipy`
 - `statsmodels`
+- `r2py`
 
 Functional statistics of the pattern of zeros of the standard spectrogram are computed using [`SpatStat`](http://spatstat.org/) toolbox developed in [`R`](https://www.r-project.org/).
 The incorporation of `R` functions into  `Python`  code relies on the [`spatstat-interface`](https://github.com/For-a-few-DPPs-more/spatstat-interface), developed by [G. Gautier](https://github.com/guilgautier).
