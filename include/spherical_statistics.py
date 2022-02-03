@@ -51,16 +51,16 @@ def the_F_statistics(zt,zp,rs):
         Fr [ir] = np.sum(inf_xu < r)/(N_u)
         ir      += 1 
     
-    return Fr
+    return Fr, rs
 
 
 def empirical_F(signal,disp = False):
     
-    Ts     = the_transform(signal)
-    N      = len(signal)-1
-    zt, zp = the_zeros(Ts,N)
-    r      = np.linspace(0,2*np.pi/np.sqrt(N),10**4)
-    F      = the_F_statistics(zt,zp,r)
+    Ts       = the_transform(signal)
+    N        = len(signal)-1
+    zt, zp   = the_zeros(Ts,N)
+    r        = np.linspace(0,2*np.pi/np.sqrt(N),10**4)
+    F,_      = the_F_statistics(zt,zp,r)
     
     if disp:
         plt.plot(r,F,color = sapin);
