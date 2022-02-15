@@ -22,7 +22,7 @@ def the_stft_transform(x, time_t=[]):
     g        = signal.gaussian(Ng, np.sqrt((Ng)/2/np.pi))
     g        = g/g.sum()
 
-    # Compute the Gaussian Short-time_t Fourier Transform
+    # Compute the Gaussian Short-Time Fourier Transform
     fx, _, Vx = signal.stft(x, fs = 1/dt, window=g, nperseg=Ng, noverlap=Ng-1, return_onesided=False)
     
     # remap the frequencies in a symmetric fashion
