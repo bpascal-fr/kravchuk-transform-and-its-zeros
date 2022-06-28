@@ -18,7 +18,7 @@ def the_chirp(N,observe = 20,duration = 15):
     time_t   = np.linspace(-observe, observe, N+1)
     envelop  = np.zeros(N+1)
     envelop[np.abs(time_t)<duration] = np.exp(-25/(duration**2-time_t[np.abs(time_t)<duration]**2))
-    freq     = 0.5 + (time_t + duration)*(1 - 0.5)/observe
+    freq     = 0.5 + (time_t + duration)*(1 - 0.5)/(2*duration)
     chirp    = np.sin(2*np.pi*freq*time_t)
     signal   = chirp*envelop
     signal   /= np.linalg.norm(signal,ord=2)
