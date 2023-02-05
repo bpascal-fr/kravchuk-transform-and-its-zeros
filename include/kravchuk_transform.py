@@ -3,7 +3,7 @@ import scipy.special as sps
 
 def the_transform(x,Nt = 500,Np = 500):
 
-    N  = x.shape[0] 
+    N  = x.shape[0] - 1
     thetas = np.linspace(1e-10,np.pi,Nt)
     phis   = np.linspace(0,2*np.pi,Np)
     
@@ -18,7 +18,7 @@ def the_transform(x,Nt = 500,Np = 500):
     Z = np.kron(z,np.ones((N,1,1)))
     
     # indices
-    ell = np.arange(N)
+    ell = np.arange(N+1)
     L = np.kron(ell,np.ones((Np,Nt,1))).T
     
     # compute the transform using the generative function trick
