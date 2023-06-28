@@ -15,7 +15,7 @@ def the_transform(x,Nt = 500,Np = 500):
     
     # map of phase space variable
     z = np.cos(Thetas/2)/np.sin(Thetas/2)*np.exp(1j*Phis)
-    Z = np.kron(z,np.ones((N,1,1)))
+    Z = np.kron(z,np.ones((N+1,1,1)))
     
     # indices
     ell = np.arange(N+1)

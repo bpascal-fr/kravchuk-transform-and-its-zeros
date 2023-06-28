@@ -51,12 +51,14 @@ def noise_samples(N,alpha = 0.05,m=199, time_t=[],folder = 'samples'):
         # find its zeros 
         vnt, vnf = the_stft_zeros(Vn,time_t,fn)
         # compute the spatial statistics of the STFT
-        r_K, KR, r_F, FR = spatialStatsFromR(time_t,fn,vnt,vnf)
+        # r_K, KR, r_F, FR = spatialStatsFromR(time_t,fn,vnt,vnf)
+        # not available anymore in SpatStat #
 
         # Save the data
         mdict = {"N" : N, "wnoise" : wnoise, "time_t" : time_t, "Kn" : Kn, "znt" : znt, "znp" : znp,
                 "rs" : rs, "Fn" : Fn, "RipK" : RipK, "Vn" : Vn, "fn" : fn, "vnt" : vnt, "vnf" : vnf,
-                "r_K" : r_K, "KR" : KR, "r_F" : r_F, "FR" : FR}
+                #"r_K" : r_K, "KR" : KR, "r_F" : r_F, "FR" : FR not available anymore
+                }
         savemat('../samples/noise_'+str(n)+'.mat',mdict)
         
     return alpha, m, folder
