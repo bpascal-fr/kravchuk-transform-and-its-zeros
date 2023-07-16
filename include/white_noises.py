@@ -8,8 +8,8 @@ from kravchuk_transform     import the_transform, the_zeros
 from kravchuk_display       import signal_display, planar_display, spherical_display
 from spherical_statistics   import the_distance, the_F_statistics, the_K_statistics, empirical_F, empirical_K
 
-from stft_transform  import the_stft_transform, the_stft_zeros, stft_display
-from spatialstats    import spatialStatsFromR
+from stft_transform         import the_stft_transform, the_stft_zeros, stft_display
+from spatialstats           import spatialStatsFromR
 
 def noise_samples(N,alpha = 0.05,m=199, time_t=[],folder = 'samples'):
     
@@ -51,14 +51,12 @@ def noise_samples(N,alpha = 0.05,m=199, time_t=[],folder = 'samples'):
         # find its zeros 
         vnt, vnf = the_stft_zeros(Vn,time_t,fn)
         # compute the spatial statistics of the STFT
-        # r_K, KR, r_F, FR = spatialStatsFromR(time_t,fn,vnt,vnf)
-        # not available anymore in SpatStat #
+        r_K, KR, r_F, FR = spatialStatsFromR(time_t,fn,vnt,vnf)
 
         # Save the data
         mdict = {"N" : N, "wnoise" : wnoise, "time_t" : time_t, "Kn" : Kn, "znt" : znt, "znp" : znp,
                 "rs" : rs, "Fn" : Fn, "RipK" : RipK, "Vn" : Vn, "fn" : fn, "vnt" : vnt, "vnf" : vnf,
-                #"r_K" : r_K, "KR" : KR, "r_F" : r_F, "FR" : FR not available anymore
-                }
+                "r_K" : r_K, "KR" : KR, "r_F" : r_F, "FR" : FR}
         savemat('../samples/noise_'+str(n)+'.mat',mdict)
         
     return alpha, m, folder

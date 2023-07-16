@@ -13,8 +13,8 @@ from kravchuk_transform     import the_transform, the_zeros
 from kravchuk_display       import signal_display, planar_display, spherical_display
 from spherical_statistics   import the_distance, the_F_statistics, the_K_statistics, empirical_F, empirical_K
 from detection_test         import the_test_statistic, the_test
-from stft_transform  import the_stft_transform, the_stft_zeros, stft_display
-from white_noises    import noise_samples
+from stft_transform         import the_stft_transform, the_stft_zeros, stft_display
+from white_noises           import noise_samples
 
 
 mpl.rcParams['xtick.labelsize'] = 30;

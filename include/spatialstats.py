@@ -10,7 +10,7 @@ from spatstat_interface.utils import to_pandas_data_frame
 from spatstat_interface.interface import SpatstatInterface
 
 spatstat = SpatstatInterface(update=True)
-spatstat.import_package("geom", update=True)
+spatstat.import_package("geom", "explore",update=True)
 
 def spatialStatsFromR(time_t,f,zt,zf):
 
@@ -23,14 +23,14 @@ def spatialStatsFromR(time_t,f,zt,zf):
     X       = spatstat.geom.ppp(*sample, window=window)
 
     numpy2ri.deactivate()
-    Kest_r  = spatstat.Kest(X)
+    Kest_r  = spatstat.explore.Kest(X)
     Kest_df = to_pandas_data_frame(Kest_r)
 
 
     r_K     = np.array(Kest_df["r"])
     KR      = np.array(Kest_df["border"])
     
-    Fest_r  = spatstat.Fest(X)
+    Fest_r  = spatstat.explore.Fest(X)
     Fest_df = to_pandas_data_frame(Fest_r)
 
 
