@@ -4,11 +4,11 @@ import scipy.special as sps
 def the_transform(x,Nt = 500,Np = 500):
 
     N  = x.shape[0] - 1
-    thetas = np.linspace(1e-10,np.pi,Nt)
+    thetas = np.linspace(1e-15,np.pi,Nt)
     phis   = np.linspace(0,2*np.pi,Np)
     
     # duplicate the signal
-    X = np.kron(x,np.ones((Np,Nt,1))).T
+    X = np.kron(np.conj(x),np.ones((Np,Nt,1))).T
     
     # maps of angles 
     Thetas, Phis = np.meshgrid(thetas,phis,indexing='ij')
