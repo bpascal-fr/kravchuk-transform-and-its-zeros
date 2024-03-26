@@ -5,7 +5,7 @@
 This project contains the Python code associated to the paper
 
 > **Pascal, B.** & Bardenet, R. (2022). ``*A covariant, discrete time-frequency representation tailored for zero-based signal detection*". Submitted.  
->  [hal](https://hal.archives-ouvertes.fr/)
+>  [arxiv:2202.03835](https://arxiv.org/abs/2202.03835)
 
 ## Project description
 
