@@ -2,7 +2,7 @@
 
 ## Detection methodology based on the zeros of the *Kravchuk* spectrogram  
 
-This project contains the Python code associated to the papier
+This project contains the Python code associated to the paper
 
 > **Pascal, B.** & Bardenet, R. (2022). ``*A covariant, discrete time-frequency representation tailored for zero-based signal detection*". Submitted.  
 >  [hal](https://hal.archives-ouvertes.fr/)
