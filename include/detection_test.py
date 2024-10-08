@@ -63,7 +63,7 @@ def the_test(signal,alpha,m,folder='samples',functional='F'):
     print(' ')
     print('--------------------------------------------------------------')
     print(' ')
-    print('Threshold of rejection: %.2d' % (T_m[-k]))
-    print('Value of the summary statistics: %.2d' % t_exp)
+    print('Threshold of rejection: %.2f' % (T_m[-k]))
+    print('Value of the summary statistics: %.2f' % t_exp)
     return 
     
